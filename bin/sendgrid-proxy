@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+const dotenv = require('dotenv');
+const proxy = require('../');
+const core = proxy.core;
+const spinner = proxy.spinner;
+
+let CORE;
+
+dotenv.config();
+if (process.env.SENDGRID_API_ID && process.env.PORT)
+{
+	spinner.init();
+	CORE = new core(
+	{
+		spinner: spinner
+	});
+	CORE.run(
+	{
+		port: process.env.PORT
+	});
+}
+else
+{
+	process.exit(1);
+}
