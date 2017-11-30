@@ -1,4 +1,3 @@
-const request = require('request-promise');
 const proxy = require('express-http-proxy');
 const server = require('express')();
 const wordingArray = require('../wording.json');
