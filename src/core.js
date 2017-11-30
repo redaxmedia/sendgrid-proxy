@@ -20,6 +20,7 @@ function run(runArray)
 		proxyReqOptDecorator: proxyReqOpts =>
 		{
 			proxyReqOpts.headers['Authorization'] = 'Bearer ' + process.env.SENDGRID_API_ID;
+			proxyReqOpts.headers['Content-Type'] = 'application/json';
 			return proxyReqOpts;
 		},
 		userResDecorator: function(proxyRes, proxyResData, userReq, userRes)
