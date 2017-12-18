@@ -25,6 +25,7 @@ function run(runArray)
 		},
 		userResDecorator: function(proxyRes, proxyResData, userReq, userRes)
 		{
+			userRes.set('Access-Control-Allow-Origin', '*');
 			if (userRes.statusCode > 399 && userRes.statusCode < 600)
 			{
 				spinner.fail(userReq.method + ' ' + userReq.path + ' ' + userRes.statusCode);
