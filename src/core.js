@@ -23,7 +23,7 @@ function run(runArray)
 			proxyReqOpts.headers['Content-Type'] = 'application/json';
 			return proxyReqOpts;
 		},
-		userResDecorator: function(proxyRes, proxyResData, userReq, userRes)
+		userResDecorator: (proxyRes, proxyResData, userReq, userRes) =>
 		{
 			userRes.set('Access-Control-Allow-Origin', '*');
 			if (userRes.statusCode > 399 && userRes.statusCode < 600)
