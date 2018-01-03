@@ -17,6 +17,7 @@ if (process.env.SENDGRID_API_ID && process.env.PORT)
 	});
 	CORE.run(
 	{
+		apiId: process.env.SENDGRID_API_ID,
 		port: process.env.PORT
 	});
 }
