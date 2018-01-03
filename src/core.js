@@ -19,7 +19,7 @@ function run(runArray)
 		https: true,
 		proxyReqOptDecorator: proxyReqOpts =>
 		{
-			proxyReqOpts.headers['Authorization'] = 'Bearer ' + process.env.SENDGRID_API_ID;
+			proxyReqOpts.headers['Authorization'] = 'Bearer ' + runArray.apiId;
 			proxyReqOpts.headers['Content-Type'] = 'application/json';
 			return proxyReqOpts;
 		},
