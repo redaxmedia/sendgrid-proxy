@@ -60,7 +60,7 @@ function construct(dependency)
 {
 	const exports =
 	{
-		run: run
+		run
 	};
 
 	/* inject dependency */
