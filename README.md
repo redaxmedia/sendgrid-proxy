@@ -18,8 +18,16 @@ Preview
 Installation
 ------------
 
+Clone the repository:
+
 ```
-npm install sendgrid-proxy
+git clone https://github.com/redaxmedia/sendgrid-proxy.git
+```
+
+Install the dependencies:
+
+```
+npm install
 ```
 
 
