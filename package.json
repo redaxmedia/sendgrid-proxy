@@ -1,7 +1,7 @@
 {
 	"name": "sendgrid-proxy",
 	"description": "A proxy server to unleash the SendGrid API without the need of user authentication",
-	"version": "1.0.7",
+	"version": "1.1.0",
 	"license": "GPL-3.0",
 	"keywords":
 	[
@@ -25,20 +25,21 @@
 	},
 	"dependencies":
 	{
-		"dotenv": "6.0.0",
-		"express": "4.16.3",
-		"express-http-proxy": "1.2.0",
-		"ora": "3.0.0"
+		"dotenv": "8.2.0",
+		"express": "4.17.1",
+		"express-http-proxy": "1.6.0",
+		"ora": "4.0.3"
 	},
 	"devDependencies":
 	{
-		"eslint": "5.3.0",
-		"eslint-config-redaxmedia": "1.0.1"
+		"eslint": "6.6.0",
+		"eslint-config-redaxmedia": "1.2.0"
 	},
 	"scripts":
 	{
 		"start": "bin/sendgrid-proxy",
-		"lint": "eslint bin/sendgrid-proxy src"
+		"lint": "eslint bin/sendgrid-proxy src",
+		"fix": "eslint bin/sendgrid-proxy src --fix"
 	},
 	"bin":
 	{
