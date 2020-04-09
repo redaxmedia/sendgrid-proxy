@@ -9,12 +9,6 @@ SendGrid Proxy
 [![Deploy Heroku](https://img.shields.io/badge/deploy-heroku-7056bf.svg)](https://heroku.com/deploy?template=https://github.com/redaxmedia/sendgrid-proxy)
 
 
-Preview
--------
-
-![Terminal Session](https://cdn.rawgit.com/redaxmedia/media/master/sendgrid-proxy/terminal-session.svg)
-
-
 Installation
 ------------
 
