@@ -1,6 +1,6 @@
 const proxy = require('express-http-proxy');
 const server = require('express')();
-const wordingArray = require('../wording.json');
+const wordingObject = require('../wording.json');
 
 let spinner;
 
@@ -9,17 +9,19 @@ let spinner;
  *
  * @since 1.0.0
  *
- * @param runArray array
+ * @param {object} runObject
+ *
+ * @return {void}
  */
 
-function run(runArray)
+function run(runObject)
 {
 	server.use('/', proxy('api.sendgrid.com',
 	{
 		https: true,
 		proxyReqOptDecorator: proxyReqOpts =>
 		{
-			proxyReqOpts.headers['Authorization'] = 'Bearer ' + runArray.apiId;
+			proxyReqOpts.headers['Authorization'] = 'Bearer ' + runObject.apiId;
 			proxyReqOpts.headers['Content-Type'] = 'application/json';
 			return proxyReqOpts;
 		},
@@ -32,7 +34,7 @@ function run(runArray)
 			}
 			else
 			{
-				spinner.pass(userReq.method + ' ' + userReq.path + ' ' + userRes.statusCode);
+				spinner.succeed(userReq.method + ' ' + userReq.path + ' ' + userRes.statusCode);
 			}
 			return proxyResData;
 		}
@@ -40,9 +42,9 @@ function run(runArray)
 
 	/* listen */
 
-	server.listen(runArray.port, () =>
+	server.listen(runObject.port, () =>
 	{
-		spinner.start(wordingArray.listen_on + ' ' + wordingArray.colon + runArray.port);
+		spinner.start(wordingObject.listen_on + ' ' + wordingObject.colon + runObject.port);
 	});
 }
 
@@ -51,23 +53,23 @@ function run(runArray)
  *
  * @since 1.0.0
  *
- * @param dependency object
+ * @param {object} injectorObject
  *
- * @return object
+ * @return {object}
  */
 
-function construct(dependency)
+function construct(injectorObject)
 {
 	const exports =
 	{
 		run
 	};
 
-	/* inject dependency */
+	/* handle injector */
 
-	if (dependency.spinner)
+	if (injectorObject.spinner)
 	{
-		spinner = dependency.spinner;
+		spinner = injectorObject.spinner;
 	}
 	return exports;
 }

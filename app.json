@@ -1,6 +1,6 @@
 {
 	"name": "sendgrid-proxy",
-	"description": "A proxy server to unleash the SendGrid API without the need of user authentication",
+	"description": "A dead simple HTTP proxy to unleash the SendGrid API",
 	"repository": "https://github.com/redaxmedia/sendgrid-proxy",
 	"keywords":
 	[

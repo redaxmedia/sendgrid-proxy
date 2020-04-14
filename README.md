@@ -1,7 +1,7 @@
 SendGrid Proxy
 ==============
 
-> A proxy server to unleash the SendGrid API without the need of user authentication.
+> A dead simple HTTP proxy to unleash the SendGrid API.
 
 [![Build Status](https://img.shields.io/travis/redaxmedia/sendgrid-proxy.svg)](https://travis-ci.org/redaxmedia/sendgrid-proxy)
 [![NPM Version](https://img.shields.io/npm/v/sendgrid-proxy.svg)](https://npmjs.com/package/sendgrid-proxy)
@@ -12,16 +12,8 @@ SendGrid Proxy
 Installation
 ------------
 
-Clone the repository:
-
 ```
-git clone https://github.com/redaxmedia/sendgrid-proxy.git
-```
-
-Install the dependencies:
-
-```
-npm install
+npm install sendgrid-proxy
 ```
 
 
@@ -39,8 +31,16 @@ PORT=
 Usage
 -----
 
+Serve local HTTP proxy:
+
 ```
-bin/sendgrid-proxy
+sendgrid-proxy
+```
+
+Browse your working copy:
+
+```
+http://localhost:3000/v3
 ```
 
 

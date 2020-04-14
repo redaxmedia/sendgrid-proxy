@@ -1,19 +1,18 @@
 #!/usr/bin/env node
 
+const ora = require('ora');
 const dotenv = require('dotenv');
 const proxy = require('../');
 const core = proxy.core;
-const spinner = proxy.spinner;
 
 let CORE;
 
 dotenv.config();
 if (process.env.SENDGRID_API_ID && process.env.PORT)
 {
-	spinner.init();
 	CORE = new core(
 	{
-		spinner
+		spinner: new ora()
 	});
 	CORE.run(
 	{
