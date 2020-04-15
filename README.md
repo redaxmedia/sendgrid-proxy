@@ -24,7 +24,7 @@ Create a `.env` file to define your environment variables:
 
 ```
 SENDGRID_API_ID=
-PORT=
+PORT=3000
 ```
 
 
