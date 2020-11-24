@@ -3,7 +3,7 @@ SendGrid Proxy
 
 > A dead simple HTTP proxy to unleash the SendGrid API.
 
-[![Build Status](https://img.shields.io/travis/redaxmedia/sendgrid-proxy.svg)](https://travis-ci.org/redaxmedia/sendgrid-proxy)
+[![Build Status](https://img.shields.io/github/workflow/status/redaxmedia/sendgrid-proxy/ci.svg)](https://github.com/redaxmedia/sendgrid-proxy/actions?query=workflow:ci)
 [![NPM Version](https://img.shields.io/npm/v/sendgrid-proxy.svg)](https://npmjs.com/package/sendgrid-proxy)
 [![License](https://img.shields.io/npm/l/sendgrid-proxy.svg)](https://npmjs.com/package/sendgrid-proxy)
 [![Deploy Heroku](https://img.shields.io/badge/deploy-heroku-7056bf.svg)](https://heroku.com/deploy?template=https://github.com/redaxmedia/sendgrid-proxy)
