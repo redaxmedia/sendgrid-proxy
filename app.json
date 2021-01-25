@@ -10,7 +10,7 @@
 	],
 	"env":
 	{
-		"SENDGRID_API_ID":
+		"SENDGRID_API_KEY":
 		{
 			"required": true
 		}

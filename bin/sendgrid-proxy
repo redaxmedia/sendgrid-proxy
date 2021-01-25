@@ -8,7 +8,7 @@ const core = proxy.core;
 let CORE;
 
 dotenv.config();
-if (process.env.SENDGRID_API_ID && process.env.PORT)
+if (process.env.SENDGRID_API_KEY && process.env.PORT)
 {
 	CORE = new core(
 	{
@@ -16,7 +16,7 @@ if (process.env.SENDGRID_API_ID && process.env.PORT)
 	});
 	CORE.run(
 	{
-		apiId: process.env.SENDGRID_API_ID,
+		apiKey: process.env.SENDGRID_API_KEY,
 		port: process.env.PORT
 	});
 }

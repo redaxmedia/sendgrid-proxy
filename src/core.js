@@ -21,7 +21,7 @@ function run(runObject)
 		https: true,
 		proxyReqOptDecorator: proxyReqOpts =>
 		{
-			proxyReqOpts.headers['Authorization'] = 'Bearer ' + runObject.apiId;
+			proxyReqOpts.headers['Authorization'] = 'Bearer ' + runObject.apiKey;
 			proxyReqOpts.headers['Content-Type'] = 'application/json';
 			return proxyReqOpts;
 		},
